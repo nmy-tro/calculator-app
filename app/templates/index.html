@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>シンプル計算機</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="calculator">
+        <h1>シンプル計算機</h1>
+        <form method="POST">
+            <input type="text" name="expression" placeholder="例: 3 + 4 または sqrt 16" required>
+            <button type="submit">計算</button>
+            <button type="reset">リセット</button>
+        </form>
+        {% if result is not none %}
+            <div class="result">
+                <h2>結果: {{ result }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
