@@ -3,6 +3,7 @@ version: "3"
 services:
   web:
     build: ./app
+    image: calculator_app
     expose:
       - "5000"
     networks:
